@@ -1,7 +1,7 @@
-package section6;
+package main.java.section5;
 
-public class Synchronization {
-    public static void main(String[] args) throws InterruptedException {
+public class Main {
+    public static void main(String[] args) throws InterruptedException{
         InventoryCounter inventoryCounter = new InventoryCounter();
         IncrementingThread incrementingThread = new IncrementingThread(inventoryCounter);
         DecrementingThread decrementingThread = new DecrementingThread(inventoryCounter);
@@ -55,24 +55,16 @@ public class Synchronization {
     private static class InventoryCounter {
         private int items = 0;
 
-        Object lock = new Object();
-
-        public /*synchronized*/ void increment() {
-            synchronized (this.lock) {
-                items++;
-            }
+        public void increment() {
+            items++;
         }
 
-        public /*synchronized*/ void decrement() {
-            synchronized (this.lock) {
-                items--;
-            }
+        public void decrement() {
+            items--;
         }
 
-        public /*synchronized*/ int getItems() {
-            synchronized (this.lock) {
-                return items;
-            }
+        public int getItems() {
+            return items;
         }
     }
 }

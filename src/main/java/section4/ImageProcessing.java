@@ -1,4 +1,4 @@
-package section4;
+package main.java.section4;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

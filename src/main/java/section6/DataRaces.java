@@ -1,4 +1,4 @@
-package section6;
+package main.java.section6;
 
 public class DataRaces {
 

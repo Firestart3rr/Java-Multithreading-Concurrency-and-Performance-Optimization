@@ -1,4 +1,4 @@
-package section4;
+package main.java.section4;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
